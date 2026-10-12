@@ -1,0 +1,15 @@
+[project]
+name = "rag"
+version = "0.1.0"
+description = "A learning path from naive vector RAG to eval-driven hybrid RAG"
+requires-python = ">=3.9"
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["rag", "rag.evaluation"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

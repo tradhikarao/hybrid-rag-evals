@@ -19,7 +19,21 @@ its own and teaches one concept.
 ```bash
 source .venv/bin/activate
 pip install -r requirements.txt
-cp .env .env   # then fill in OPENAI_API_KEY
+pip install -e .   # makes the shared `rag` package importable from every project
+```
+
+Put `ANTHROPIC_API_KEY` (generation) and `OPENAI_API_KEY` (the 06 judges) in a
+`.env` file at the repo root.
+
+## Layout
+
+```
+rag/          shared building blocks used by every project
+  retrieval.py     semantic, keyword, RRF fusion, cross-encoder reranking
+  generation.py    answer from retrieved chunks with Claude
+  evaluation/      metrics, abstention threshold, LLM judge, question loader
+0N-*/         one runnable script per concept, thin on top of rag/
+tests/        unit tests for fusion and metrics (pytest)
 ```
 
 ## Order

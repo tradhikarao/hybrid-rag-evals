@@ -80,10 +80,10 @@ question. What you have to convert:
 
 | Retriever | Where | What it returns | Turn it into file names by… |
 |---|---|---|---|
-| Naive vector | `01-naive-vector-rag/main.py` → `retrieve()` | list of dicts, best first | reading `['source']` from each |
-| BM25 | `03-hybrid-retriever/HybridRetreiver.py` → `keywordSearch()` | `(indices, scores)` arrays | `docs[int(i)]['source']` for each `i` in `indices[0]` |
-| Hybrid (RRF) | `03-hybrid-retriever` → `reciprocalRankFusion()` | fused list of dicts | reading `['source']` from each |
-| Reranked | `04-reranking-rag` → `rerankWithCrossEncoder()` | reranked list of dicts | reading `['source']` from each |
+| Semantic | `rag/retrieval.py` → `SemanticRetriever.search()` | list of `Hit`s, best first | reading `.source` from each |
+| BM25 | `rag/retrieval.py` → `KeywordRetriever.search()` | list of `Hit`s, best first | reading `.source` from each |
+| Hybrid (RRF) | `rag/retrieval.py` → `reciprocal_rank_fusion()` | fused list of `Hit`s | reading `.source` from each |
+| Reranked | `rag/retrieval.py` → `CrossEncoderReranker.rerank()` | reranked list of `Hit`s | reading `.source` from each |
 | LangChain hybrid | `05-framework-rag` → `hybrid_retriever.invoke()` | list of `Document`s | `doc.metadata['source']` |
 
 Tips:
@@ -122,7 +122,7 @@ smaller than that as a tie.
 Follow the build plan at the end of `05b-eval-basics/2-llm-as-judge.md`:
 
 1. For each eval question: retrieve with your best retriever, generate an
-   answer (you can reuse `generate()` from `01-naive-vector-rag/main.py`,
+   answer (you can reuse `generate()` from `rag/generation.py`,
    which already calls Claude), and save question + context + answer.
 2. Write the judge prompt yourself: one criterion per call, anchored 1–5
    rubric, inputs in tags, reasoning before score, fixed output format.

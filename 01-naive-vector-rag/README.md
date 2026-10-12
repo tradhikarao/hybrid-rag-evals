@@ -7,11 +7,11 @@ answer. No framework, no vector database server — just numpy.
 ## Run
 
 ```bash
-cd Hybrid Retrievers - RAG
+cd Hybrid Retrievers - RAGwhi
 source .venv/bin/activate
-pip install -r requirements.txt
-cp .env .env   # fill in OPENAI_API_KEY, if not already done
-python 01-naive-vector-rag/main.py "How much does the Pro plan cost?"
+pip install -r requirements.txt && pip install -e .
+# put ANTHROPIC_API_KEY in .env at the repo root, if not already done
+python 01-naive-vector-rag/naive_rag.py "How much does the Pro plan cost?"
 ```
 
 Try a few other questions against `data/`:
