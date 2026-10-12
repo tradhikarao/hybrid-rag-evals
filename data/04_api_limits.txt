@@ -1,0 +1,8 @@
+Nimbus API Rate Limits
+
+The Nimbus REST API allows 60 requests per minute on the Free plan and
+600 requests per minute on Pro and Team plans.
+Exceeding the rate limit returns an HTTP 429 status code with a Retry-After header.
+Bulk upload endpoints have a separate limit of 10 concurrent uploads per account.
+API keys can be regenerated at any time from the developer settings page,
+which immediately invalidates the old key.

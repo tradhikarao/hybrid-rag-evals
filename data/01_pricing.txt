@@ -1,0 +1,9 @@
+Nimbus Cloud Storage Pricing
+
+Nimbus offers three plans: Free, Pro, and Team.
+The Free plan includes 5GB of storage and is limited to 2 devices.
+The Pro plan costs $9.99 per month and includes 2TB of storage, unlimited devices,
+and priority email support.
+The Team plan costs $24.99 per month per user and includes 5TB of pooled storage,
+shared folders, and admin controls.
+Annual billing for Pro or Team gives a 15% discount compared to monthly billing.

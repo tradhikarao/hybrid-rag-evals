@@ -1,0 +1,8 @@
+Nimbus Service Level Agreement
+
+Nimbus guarantees 99.9% uptime for Pro and Team plans, measured monthly.
+If uptime falls below this guarantee, affected customers receive service credits
+equal to 10% of their monthly bill for each additional 0.1% of downtime.
+Free plan users are not covered by the uptime guarantee.
+Scheduled maintenance windows are announced at least 48 hours in advance
+and do not count against the uptime guarantee.

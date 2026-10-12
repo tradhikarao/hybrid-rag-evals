@@ -1,0 +1,7 @@
+question, expected_sources, answerable, reference
+I need atleast 10 TB of storage do you provide that?, 01_pricing.txt, no, The documentation doesnt mention that 10 TB of storage is offered so the system should say it doenst know.
+Whats your cheapest plan for starters to evaluate your platform?, 01_pricing.txt, yes, The cheapest plan is the Free plan which offers upto 5GB of storage and is limited to 2 devices.
+Are there any discounts provided for students?, 01_pricing.txt, no, The documentation deoesnt say that are discounts for students but can offer the Free plan which costs $0 for students.
+Do you provide malware scanning for uploaded files?, 02_security.txt, no, The documentation doesnt say that there's malware scanning for uploaded files so the system should say it doenst know.
+Is data encrypted at rest and in motion?, 02_security.txt, yes, The system should say that All files uploaded to Nimbus are encrypted using AES-256 both at rest and in transit.
+What SLAs do you provide for the various tiers?, 03_uptime_sla.txt, yes, Nimbus guarantees 99.9% uptime for Pro and Team plans measured monthly with service credits provided as compensation if uptime falls below this guarantee.

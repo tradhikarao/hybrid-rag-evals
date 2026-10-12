@@ -1,0 +1,8 @@
+Nimbus Data Protection
+
+All files uploaded to Nimbus are encrypted using AES-256 both at rest and in transit.
+Encryption keys are rotated automatically every 90 days.
+Two-factor authentication can be enabled from the account security settings.
+Nimbus never scans file contents for advertising purposes.
+In the event of a lost device, all active sessions can be revoked remotely
+from the web dashboard.
