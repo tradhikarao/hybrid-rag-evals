@@ -7,7 +7,8 @@ answer. No framework, no vector database server — just numpy.
 ## Run
 
 ```bash
-cd Hybrid Retrievers - RAGwhi
+git clone https://github.com/tradhikarao/hybrid-rag-evals.git
+cd hybrid-rag-evals
 source .venv/bin/activate
 pip install -r requirements.txt && pip install -e .
 # put ANTHROPIC_API_KEY in .env at the repo root, if not already done
